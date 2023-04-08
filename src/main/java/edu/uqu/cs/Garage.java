@@ -22,6 +22,8 @@ public class Garage{
      *
      */
 
+    private Car [] cars = new Car[3];
+
     /************ Part 2 **************/
     /**
      * Decalre a static/class variable named countCars
@@ -31,6 +33,7 @@ public class Garage{
      * public dataType varName= value;
      *
      */
+    public static int countCars = 0;
 
     /************ Part 3 **************/
     /**
@@ -46,6 +49,15 @@ public class Garage{
      *}
      */
 
+    public Garage(){
+
+        for (int i = 0; i < cars.length; i++){
+
+            cars[i] = new Car();
+        }
+
+    }
+
     /************ Part 4 **************/
     /**
      * Define addCar(String parameter) that adds a new car (by model) to the garage 
@@ -59,6 +71,14 @@ public class Garage{
      * Syntax:
      * public void methodName(String m)
      */
+     public void addCar(String m){
+        
+         if (m.equlsIgnoreCase(setmodel())){
+            model = m;
+            cars.moveCarIn(true);
+            countCars++;
+        }
+     }
 
 
     /************ Part 5 **************/
@@ -71,6 +91,14 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+
+    public void moveOut(String m){
+
+        getmodel
+
+
+    }
+     
 
 
 
