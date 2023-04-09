@@ -87,12 +87,12 @@ public class Car{
 
     public void moveCarOut(boolean flag){
 
-        this.inOutGarage = flag;
+        this.inOutGarage = false;
     }
 
     public void moveCarIn (boolean flag){
 
-        this.inOutGarage = flag;
+        this.inOutGarage = true;
     }
 
 

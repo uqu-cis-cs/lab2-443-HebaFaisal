@@ -102,7 +102,7 @@ public class Garage{
      *
      */
 
-    public void moveOut(String m){
+    public void moveout(String m){
         for (Car car : cars){
             if (car.getModel().equalsIgnoreCase(m))
             car.moveCarOut();
@@ -124,11 +124,13 @@ public class Garage{
      */
 
     public void moveOut(String m){
-
-        for (Car car : cars){
-            if (car.getModel().equalsIgnoreCase(m))
-            car.moveCarIn();
+        for (int i = 0; i < countCars; i++){
+            if (cars[i].getModel().equalsIgnoreCase(m))
+            if (cars[i].getinOutGarage() == true){
+                cars[i].moveCarOut();
+            }
         }
+
     }
 
 
@@ -144,7 +146,7 @@ public class Garage{
 
     public void listCars(){
         for (int i = 0; i < cars.length; i++){
-            System.out.println(cars[i].inOutGarage() + " " + cars[i],getModel());
+            System.out.println(cars[i].getinOutGarage() + " " + cars[i].getModel());
         }
     }
 
