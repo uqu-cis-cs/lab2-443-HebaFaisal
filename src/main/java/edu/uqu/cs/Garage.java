@@ -105,7 +105,7 @@ public class Garage{
     public void moveOut(String m){
         for (Car car : cars){
             if (car.getModel().equalsIgnoreCase(m))
-            caar.moveCarOut();
+            car.moveCarOut();
         }
     }
      
@@ -123,6 +123,14 @@ public class Garage{
      *
      */
 
+    public void moveOut(String m){
+
+        for (Car car : cars){
+            if (car.getModel().equalsIgnoreCase(m))
+            car.moveCarIn();
+        }
+    }
+
 
     /************ Part 7 **************/
     /**
@@ -133,6 +141,12 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+
+    public void listCars(){
+        for (int i = 0; i < cars.length; i++){
+            System.out.println(cars[i].inOutGarage() + " " + cars[i],getModel());
+        }
+    }
 
 
 
