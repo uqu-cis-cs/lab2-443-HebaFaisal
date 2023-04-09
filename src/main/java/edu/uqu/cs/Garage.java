@@ -72,12 +72,22 @@ public class Garage{
      * public void methodName(String m)
      */
      public void addCar(String m){
+
+        boolean CarExists = false;
         
-         if (m.equlsIgnoreCase(setmodel())){
-            model = m;
-            cars.moveCarIn(true);
+         for (int i = 0; i < countCars; i++){
+            if (cars[i].equalsIgnoreCase(m)) {
+                CarExists = true;
+                break;
+            }
+         }
+
+         if (!CarExists){
+            cars[countCars].setModel();
             countCars++;
-        }
+
+         }
+
      }
 
 
@@ -93,10 +103,10 @@ public class Garage{
      */
 
     public void moveOut(String m){
-
-        getmodel
-
-
+        for (Car car : cars){
+            if (car.getModel().equalsIgnoreCase(m))
+            caar.moveCarOut();
+        }
     }
      
 

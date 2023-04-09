@@ -53,7 +53,7 @@ public class Car{
      *      return this.InstanceVariableName;
      * }
      */
-     public String getmodel() {
+     public String getModel() {
 
         return this.model;
 
@@ -74,7 +74,7 @@ public class Car{
      * }
      *
      */
-    public void setmodel(String str){
+    public void setModel(String str){
 
         this.model = str;
 
