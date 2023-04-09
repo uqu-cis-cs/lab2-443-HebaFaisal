@@ -102,7 +102,7 @@ public class Garage{
      *
      */
 
-    public void moveout(String m){
+    public void moveout(String m){              // here i need to check and the class car //
         for (Car car : cars){
             if (car.getModel().equalsIgnoreCase(m))
             car.moveCarOut();
