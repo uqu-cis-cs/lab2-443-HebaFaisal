@@ -85,11 +85,8 @@ public class Garage{
          if (!CarExists){
             cars[countCars].moveCarIn();
             countCars++;
-
          }
-
      }
-
 
     /************ Part 5 **************/
     /**
@@ -101,7 +98,6 @@ public class Garage{
      * public void methodName(String m)
      *
      */
-
     public void moveOut(String m){              // here i need to check and the class car //
         for (Car car : cars){
             if (car.getModel().equalsIgnoreCase(m))
@@ -109,9 +105,6 @@ public class Garage{
         }
     }
      
-
-
-
     /************ Part 6 **************/
     /**
      * Define moveOut(String) that moves the car (by model) into the garage; 
