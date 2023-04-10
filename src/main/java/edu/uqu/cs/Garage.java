@@ -76,14 +76,14 @@ public class Garage{
         boolean CarExists = false;
         
          for (int i = 0; i < countCars; i++){
-            if (cars[i].equalsIgnoreCase(m)) {
+            if (cars[i].getModel().equalsIgnoreCase(m)) {
                 CarExists = true;
                 break;
             }
          }
 
          if (!CarExists){
-            cars[countCars].setModel();
+            cars[countCars].moveCarIn();
             countCars++;
 
          }
@@ -102,7 +102,7 @@ public class Garage{
      *
      */
 
-    public void moveout(String m){              // here i need to check and the class car //
+    public void moveOut(String m){              // here i need to check and the class car //
         for (Car car : cars){
             if (car.getModel().equalsIgnoreCase(m))
             car.moveCarOut();
@@ -123,17 +123,15 @@ public class Garage{
      *
      */
 
-    public void moveOut(String m){
+    public void moveIn(String m){
         for (int i = 0; i < countCars; i++){
             if (cars[i].getModel().equalsIgnoreCase(m))
-            if (cars[i].getinOutGarage() == true){
-                cars[i].moveCarOut();
+            if (cars[i].getinOutGarage() == false){
+                cars[i].moveCarIn();
             }
         }
 
     }
-
-
     /************ Part 7 **************/
     /**
      * Define listCars() to display/list all the cars in the garage;
@@ -143,13 +141,14 @@ public class Garage{
      * public void methodName(String m)
      *
      */
-
     public void listCars(){
-        for (int i = 0; i < cars.length; i++){
-            System.out.println(cars[i].getinOutGarage() + " " + cars[i].getModel());
-        }
-    }
 
-
-
+      System.out.println("All cars in the garage are : ");
+      for (int i = 0; i < countCars; i++) {
+            if (cars[i] != null && cars[i].getinOutGarage() == true) {
+                System.out.println("Car " + (i + 1) + " : " + cars[i].getModel());
+            }
+        }   
+        System.out.println();
+    }   
 }
