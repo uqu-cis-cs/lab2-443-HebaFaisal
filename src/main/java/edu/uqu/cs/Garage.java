@@ -72,20 +72,14 @@ public class Garage{
      * public void methodName(String m)
      */
      public void addCar(String m){
-
-        boolean CarExists = false;
-        
-         for (int i = 0; i < countCars; i++){
-            if (cars[i].getModel().equalsIgnoreCase(m)) {
-                CarExists = true;
-                break;
+        for (int i = 0; i < countCars; i++){
+            if (cars[i].getModel().equalsIgnoreCase(m)){
+                return;
             }
-         }
+        }
 
-         if (!CarExists){
-            cars[countCars].moveCarIn();
-            countCars++;
-         }
+        cars[countCars].moveCarIn();
+        countCars++;
      }
 
     /************ Part 5 **************/
@@ -98,11 +92,16 @@ public class Garage{
      * public void methodName(String m)
      *
      */
-    public void moveOut(String m){              // here i need to check and the class car //
-        for (Car car : cars){
-            if (car.getModel().equalsIgnoreCase(m))
-            car.moveCarOut();
-        }
+    public void moveOut(String m){   
+        for (int i = 0; i < countCars; i++){
+            if (cars[i].getModel().equalsIgnoreCase(m)){
+                if (cars[i].getinOutGarage() == true){
+                    cars[i].moveCarOut();
+                }
+            }
+
+        }                                            // here i need to check and the class car //
+        
     }
      
     /************ Part 6 **************/
