@@ -59,10 +59,22 @@ public class Car{
 
      }
 
+     public void setModel(String m){
+
+        this.model = m;
+
+     }
+
      public boolean getinOutGarage(){
 
         return this.inOutGarage;
      }
+
+     public void setinOutGarage(boolean flag){
+
+        this.inOutGarage = flag;
+    }
+
 
 
     /************ Part 4 **************/
@@ -74,23 +86,13 @@ public class Car{
      * }
      *
      */
-    public void setModel(String str){
 
-        this.model = str;
-
-    }
-
-    public void getinOutGarage(boolean flag){
-
-        this.inOutGarage = flag;
-    }
-
-    public void moveCarOut(boolean flag){
+    public void moveCarOut(){
 
         this.inOutGarage = false;
     }
 
-    public void moveCarIn (boolean flag){
+    public void moveCarIn (){
 
         this.inOutGarage = true;
     }
