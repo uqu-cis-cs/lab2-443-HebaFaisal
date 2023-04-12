@@ -71,16 +71,21 @@ public class Garage{
      * Syntax:
      * public void methodName(String m)
      */
-     public void addCar(String m){
-        for (int i = 0; i < countCars; i++){
-            if (cars[i].getModel().equalsIgnoreCase(m)){
-                return;
+     public void addCar(String m) {
+        boolean carExists = false;
+
+       for (int i = 0; i < cars.length; i++) {
+        if (cars[i].getModel().equalsIgnoreCase(m)) {
+            
+            carExists = true;
             }
         }
-
-        cars[countCars].moveCarIn();
-        countCars++;
-     }
+        if (carExists == false){
+            cars[countCars].setModel(m);
+            cars[countCars].moveCarIn();
+            countCars++;
+        }
+    }
 
     /************ Part 5 **************/
     /**
@@ -100,7 +105,8 @@ public class Garage{
                 }
             }
 
-        }                                            // here i need to check and the class car //
+        }  
+        //System.out.println(m);                                          // here i need to check and the class car //
         
     }
      
